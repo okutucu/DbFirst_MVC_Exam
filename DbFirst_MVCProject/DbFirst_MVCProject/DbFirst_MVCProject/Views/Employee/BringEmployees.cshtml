@@ -1,0 +1,26 @@
+﻿@model List<Employee>
+
+@{
+    ViewBag.Title = "BringEmployees";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Isim</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Employee item in Model)
+        {
+            <tr>
+                <td>@item.EmployeeID</td>
+                <td>@item.FirstName</td>
+                <td>@item.Title</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

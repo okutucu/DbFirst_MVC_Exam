@@ -1,0 +1,32 @@
+﻿@model List<Category>
+@*
+    Controllerdan (Backend) gelen degeri (List<Category>) @model diyerek yakaladık.
+    (frontend category modelini tanımadığından List<Category> namespacesini webconfig'e ekledik.)
+    Table'da gelen Modeli donerek elemanları tabloya yazdırık. Boylelikle basit bir sekilde MVC islemlerini tamamlamıs olduk.
+
+    Kısacası Controller'a gelen istek sonucunda controller database'den veriyi alıp View'e iletti ve View ile gerekli işlemler yapıldıktan sonra responce donduk.
+*@
+@{
+    ViewBag.Title = "BringCategories";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Isim</th>
+            <th>Açıklama</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Category item in Model)
+        {
+            <tr>
+                <td>@item.CategoryID</td>
+                <td>@item.CategoryName</td>
+                <td>@item.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,22 @@
+﻿@model Category
+@{
+    ViewBag.Title = "AddCategory";
+}
+
+@*
+    Beginformun argümanları boş bırakabildiğimiz durumlar olabilir.
+
+    Yani Addcategory actionuna post olarak gideceğim anlamına gelir.
+    (Kendi controlluna yollamak istiyorsak.)
+    (Kendi ismindeki post olan actiona gidecek)
+*@
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(x => x.CategoryName)
+    <br />
+    @Html.TextBoxFor(x => x.Description)
+    <br />
+
+    <button>Ekle</button>
+}
+

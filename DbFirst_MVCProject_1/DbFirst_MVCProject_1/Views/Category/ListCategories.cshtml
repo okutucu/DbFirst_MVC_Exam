@@ -1,0 +1,17 @@
+﻿@model CategoryVM
+
+@*
+    CategoryVM sınıfından gelen tabloların değerlerini liste seklinde cok rahat ulasabiliriz.
+
+*@
+@{
+    ViewBag.Title = "ListCategories";
+}
+
+<ul>
+    @foreach (Product item in Model.Products)
+    {
+        <li>@item.ProductName @item.ProductID</li>
+    }
+</ul>
+
